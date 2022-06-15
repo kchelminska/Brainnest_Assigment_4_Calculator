@@ -11,22 +11,17 @@ let displayResult = ""
 let displayPreviousResult = ""
 let operation = undefined
 
-
-
 // Calculate function
 const calculate = () => {
     let action
     if(!displayResult || !displayPreviousResult){
         return
     }
-
     const previous = parseFloat(displayPreviousResult)
     const current = parseFloat(displayResult)
-
     if(isNaN(previous) || isNaN(current)){
         return
     }
-
     if(operation === "+"){
         action = previous + current
     } else if (operation === "-"){
@@ -40,13 +35,10 @@ const calculate = () => {
     } else {
         action = previous / current
     }
-
     displayResult = action
     operation = undefined
     displayPreviousResult = ""
 }
-
-
 
 // Equal function
 equals.addEventListener('click', () => {
@@ -55,8 +47,6 @@ equals.addEventListener('click', () => {
     displayPreviousResult = ""
     operation = undefined
 })
-
-
 
 // Display function
 const currentResult = () =>{
@@ -67,8 +57,6 @@ const currentResult = () =>{
         divPreviousDisplay.textContent = ""
     }   
 }
-
-
 
 // Function select operation
 const selectedOperation = (operator) => {
@@ -81,15 +69,12 @@ const selectedOperation = (operator) => {
     displayPreviousResult = displayResult
     displayResult = ""
 }
-
 operators.forEach((operator) => {
     operator.addEventListener('click', () => {
         selectedOperation(operator.textContent)
         currentResult()
     })
 })
-
-
 
 // ZERO FUNCTION
 zero.addEventListener('click', () => {
@@ -98,8 +83,6 @@ zero.addEventListener('click', () => {
         currentResult()
     }  
 })
-
-
 
 // DOTT FUNCTION
 const addNumber = (number) => {
@@ -112,8 +95,6 @@ const addNumber = (number) => {
     displayResult = displayResult + number
 }
 
-
-
 // ADD NUMBER FUNCTION
 numbers.forEach((number) => {
     number.addEventListener('click', () =>{
@@ -121,8 +102,6 @@ numbers.forEach((number) => {
         currentResult()
     })
 })
-
-
 
 // CLEAR FUNCTION
 clear.addEventListener('click', () => {
