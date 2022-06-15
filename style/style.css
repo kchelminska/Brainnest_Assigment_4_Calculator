@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    text-align: center;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: azure;
+}
+
+.container {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 50vh;
+    min-height: 80vh;
+    padding: 10px;
+    font-family: 'roboto condensed', arial;
+    color: white;
+    background-color: rgb(168, 168, 168);
+}
+
+.outputDisplay{
+    flex-basis: 100%;
+    border-radius: 5px;
+    background-color: rgba(47,47,47,1);
+    min-height: 16vh;
+}
+
+.previous_display{
+    text-align: end;
+    word-wrap:break-word;
+    word-break: break-all;
+    padding-top: 2vh;
+    padding-right: 2vh;
+    font-size: 2vh;
+    height: 6vh;
+}
+.current_display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;    
+    word-wrap:break-word;
+    word-break: break-all;
+    padding-bottom: 2vh;
+    padding-right: 2vh;
+    font-size: 5vh;
+    min-height: 10vh;
+}
+
+button {
+    border-radius: 5%;
+    border: none;
+    font-family: monospace;
+    color: black;
+    height: 10vh;
+    flex-basis: 22%;
+    font-size: 5vh;
+    text-align: center;
+    line-height: 10vh;
+    cursor: pointer;
+    background-color: rgb(219, 219, 219);
+    box-shadow: 0 0 5px black;
+}
+
+button#zero {
+    flex-basis: 48%;
+}
+
+button.clear{
+    color: rgb(221, 122, 30);
+}
+
+button.operator, button.equals{
+    background-color: rgb(241, 168, 100);
+}
+
+.operator:focus{
+    background-color: rgba(241, 168, 100, 0.6);
+}
+
+button:active{
+    background-color: rgba(241, 168, 100, 0.6);
+}
