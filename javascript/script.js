@@ -6,7 +6,6 @@ const equals = document.querySelector('.equals')
 const divCurrentDisplay = document.querySelector('.current_display');
 const divPreviousDisplay = document.querySelector('.previous_display')
 const zero = document.querySelector("#zero")
-const buttons = document.querySelectorAll('buttons')
 
 let displayResult = ""
 let displayPreviousResult = ""
